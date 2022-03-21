@@ -10,14 +10,14 @@
 #
 ############################################################################
 
-FROM node:10
+FROM node:lts
 
 ARG project=ngx-smart-popover
 ENV PROJECT_NAME=${project}
 
 RUN apt-get update --fix-missing && \
     apt-get install -qy \
-        openjdk-8-jre \
+        openjdk-11-jre \
         chromium \
     && \
     apt-get clean
